@@ -5,9 +5,22 @@ import prisma from '@/lib/prisma'
 import { notFound } from 'next/navigation'
 import ImageInputWithPreview from '@/components/admin/ImageInputWithPreview'
 
-export default async function EditServicePage({ params }: { params: { id: string } }) {
+export const dynamic = 'force-dynamic'
+
+interface EditServicePageProps {
+  params: Promise<{ id: string }> | { id: string }
+}
+
+export default async function EditServicePage({ params }: EditServicePageProps) {
+  const resolvedParams = await params
+  const id = resolvedParams?.id
+
+  if (!id || typeof id !== 'string' || id.trim() === '') {
+    notFound()
+  }
+
   const service = await prisma.serviceItem.findUnique({
-    where: { id: params.id }
+    where: { id }
   })
 
   if (!service) {
@@ -15,7 +28,7 @@ export default async function EditServicePage({ params }: { params: { id: string
   }
 
   // We need to wrap the server action to pass the id, or bind it.
-  const updateServiceWithId = updateServiceItem.bind(null, params.id)
+  const updateServiceWithId = updateServiceItem.bind(null, id)
 
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto' }}>

@@ -4,12 +4,13 @@ import { createBookingRequest } from '@/app/actions/booking'
 
 export const dynamic = 'force-dynamic'
 
-export default function BookingPage({
-  searchParams,
-}: {
-  searchParams?: { [key: string]: string | string[] | undefined };
-}) {
-  const success = searchParams?.success === 'true';
+interface BookingPageProps {
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }> | { [key: string]: string | string[] | undefined };
+}
+
+export default async function BookingPage({ searchParams }: BookingPageProps) {
+  const resolvedSearchParams = searchParams ? await searchParams : undefined;
+  const success = resolvedSearchParams?.success === 'true';
 
   return (
     <div style={{ backgroundColor: 'var(--color-background)', minHeight: '100vh', color: 'var(--color-text-main)' }}>

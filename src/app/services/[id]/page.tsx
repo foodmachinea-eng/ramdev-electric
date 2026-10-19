@@ -3,9 +3,22 @@ import prisma from '@/lib/prisma'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 
-export default async function ServiceDetailsPage({ params }: { params: { id: string } }) {
+export const dynamic = 'force-dynamic'
+
+interface ServiceDetailsPageProps {
+  params: Promise<{ id: string }> | { id: string }
+}
+
+export default async function ServiceDetailsPage({ params }: ServiceDetailsPageProps) {
+  const resolvedParams = await params
+  const id = resolvedParams?.id
+
+  if (!id || typeof id !== 'string' || id.trim() === '') {
+    notFound()
+  }
+
   const service = await prisma.serviceItem.findUnique({
-    where: { id: params.id }
+    where: { id }
   })
   
   if (!service || !service.isActive) {

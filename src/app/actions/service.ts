@@ -41,6 +41,10 @@ export async function createServiceItem(formData: FormData) {
 
 export async function updateServiceItem(id: string, formData: FormData) {
   await requireSuperAdmin()
+  if (!id || typeof id !== 'string' || id.trim() === '') {
+    throw new Error('Valid service ID is required for update.')
+  }
+
   const title = formData.get('title') as string
   const shortDescription = formData.get('shortDescription') as string
   const fullDescription = formData.get('fullDescription') as string
@@ -68,6 +72,10 @@ export async function updateServiceItem(id: string, formData: FormData) {
 
 export async function deleteServiceItem(id: string) {
   await requireSuperAdmin()
+  if (!id || typeof id !== 'string' || id.trim() === '') {
+    throw new Error('Valid service ID is required for deletion.')
+  }
+
   await prisma.serviceItem.delete({
     where: { id },
   })
