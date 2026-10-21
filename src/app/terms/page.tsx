@@ -18,7 +18,7 @@ export default function TermsPage() {
           <section>
             <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>1. General Service Terms</h2>
             <p style={{ color: 'var(--color-text-muted)' }}>
-              Intec Electric & Rewinding Works ("The Company") provides motor rewinding, submersible pump repair, and industrial switchgear services. By submitting a booking request or delivering equipment to our facility, you agree to these terms.
+              Ramdev Electric - Motor Rewinding & Electrical Works ("The Company") provides motor rewinding, submersible pump repair, and industrial switchgear services. By submitting a booking request or delivering equipment to our facility, you agree to these terms.
             </p>
           </section>
 

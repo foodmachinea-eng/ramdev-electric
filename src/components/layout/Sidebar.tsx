@@ -24,7 +24,7 @@ export default function Sidebar({ role }: { role: string }) {
         color: 'var(--color-primary)',
         letterSpacing: '-0.5px'
       }}>
-        INTEC
+        Ramdev Electric
       </div>
       <div style={{ fontSize: '0.75rem', color: '#8892b0', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '1rem' }}>
         Management

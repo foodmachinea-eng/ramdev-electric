@@ -80,9 +80,9 @@ export default async function ServiceDetailsPage({ params }: ServiceDetailsPageP
       {/* Footer */}
       <footer style={{ backgroundColor: '#06101f', color: '#94a3b8', padding: '4rem 2rem', textAlign: 'center' }}>
         <div style={{ fontSize: '2rem', fontWeight: '900', color: 'white', letterSpacing: '-1px', marginBottom: '1rem' }}>
-          {siteSettings?.websiteName?.replace('.', '') || 'INTEC'}<span style={{ color: 'var(--color-primary)' }}>.</span>
+          {siteSettings?.websiteName?.replace('.', '') || 'Ramdev Electric'}<span style={{ color: 'var(--color-primary)' }}>.</span>
         </div>
-        <p>{siteSettings?.footerContent || `© ${new Date().getFullYear()} Intec Electric & Rewinding Works. All rights reserved.`}</p>
+        <p>{siteSettings?.footerContent || `© ${new Date().getFullYear()} Ramdev Electric - Motor Rewinding & Electrical Works. All rights reserved.`}</p>
       </footer>
     </div>
   )

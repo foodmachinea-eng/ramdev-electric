@@ -3,7 +3,7 @@ import './globals.css'
 import PublicHeader from '@/components/layout/PublicHeader'
 
 export const metadata: Metadata = {
-  title: 'Intec - Industrial & Electrical Services',
+  title: 'Ramdev Electric - Motor Rewinding & Electrical Services',
   description: 'Professional motor rewinding and electrical repair services.',
 }
 

@@ -8,7 +8,7 @@ export async function login(formData: FormData) {
   const password = formData.get('password')
 
   // Check Admin Credentials
-  if (email === 'umang@123gmail.com' && password === 'umang@123') {
+  if (process.env.ADMIN_EMAIL && process.env.ADMIN_PASSWORD && email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
     const cookieStore = await cookies()
     cookieStore.set('admin_session', 'SUPER_ADMIN', {
       httpOnly: true,
@@ -20,7 +20,7 @@ export async function login(formData: FormData) {
   }
 
   // Check Owner Credentials
-  if (email === 'owner@intec.com' && password === 'owner123') {
+  if (process.env.OWNER_EMAIL && process.env.OWNER_PASSWORD && email === process.env.OWNER_EMAIL && password === process.env.OWNER_PASSWORD) {
     const cookieStore = await cookies()
     cookieStore.set('admin_session', 'SHOP_OWNER', {
       httpOnly: true,

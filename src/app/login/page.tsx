@@ -41,7 +41,7 @@ export default function LoginPage() {
       <div className="card" style={{ width: '100%', maxWidth: '400px', padding: '2.5rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <h1 style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--color-primary)', letterSpacing: '-0.5px' }}>
-            INTEC Login
+            Ramdev Electric Login
           </h1>
           <p style={{ color: 'var(--color-text-muted)' }}>Sign in to manage the platform.</p>
         </div>

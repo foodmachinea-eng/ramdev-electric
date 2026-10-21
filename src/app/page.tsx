@@ -8,7 +8,7 @@ export const dynamic = 'force-dynamic'
 
 export async function generateMetadata() {
   return buildModuleMetadata('home', {
-    title: 'Intec Electric & Rewinding Works',
+    title: 'Ramdev Electric - Motor Rewinding & Electrical Works',
     description: 'Expert motor rewinding, repair and industrial electrical services.'
   })
 }
@@ -247,9 +247,9 @@ export default async function LandingPage() {
       {/* Footer */}
       <footer style={{ backgroundColor: '#06101f', color: '#94a3b8', padding: '4rem 2rem', textAlign: 'center' }}>
         <div style={{ fontSize: '2rem', fontWeight: '900', color: 'white', letterSpacing: '-1px', marginBottom: '1rem' }}>
-          {siteSettings?.websiteName?.replace('.', '') || 'INTEC'}<span style={{ color: 'var(--color-primary)' }}>.</span>
+          {siteSettings?.websiteName?.replace('.', '') || 'Ramdev Electric'}<span style={{ color: 'var(--color-primary)' }}>.</span>
         </div>
-        <p>{siteSettings?.footerContent || `© ${new Date().getFullYear()} Intec Electric & Rewinding Works. All rights reserved.`}</p>
+        <p>{siteSettings?.footerContent || `© ${new Date().getFullYear()} Ramdev Electric - Motor Rewinding & Electrical Works. All rights reserved.`}</p>
         <div style={{ marginTop: '2rem', display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
           <Link href="/terms" style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem', textDecoration: 'underline' }}>Terms & Conditions</Link>
           <Link href="/admin" style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem', textDecoration: 'underline' }}>Admin Login</Link>

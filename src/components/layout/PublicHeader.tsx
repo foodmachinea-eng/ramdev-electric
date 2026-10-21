@@ -11,7 +11,7 @@ export default async function PublicHeader() {
 
   return (
     <ClientNav 
-      websiteName={siteSettings?.websiteName || 'INTEC'} 
+      websiteName={siteSettings?.websiteName || 'Ramdev Electric'} 
       whatsappNumber={contactInfo?.whatsapp || '1234567890'} 
       navItems={navItems}
     />

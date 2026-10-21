@@ -229,7 +229,7 @@ export default function LightDecorationPublicView({
   items,
   whatsappNumber = '1234567890',
   phone,
-  websiteName = 'INTEC'
+  websiteName = 'Ramdev Electric'
 }: PublicViewProps) {
   const [activeCategory, setActiveCategory] = useState<string>('All')
   const [selectedImage, setSelectedImage] = useState<LightDecorationItem | null>(null)

@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local backups and temporary migration/debug artifacts
+*.bak-*
+.check-cms-columns.js
+.neon
+cms-dynamic-content.patch
+migrate-local-cms-to-neon.js.js
+migrate-local-data-to-neon.js
+restore-slider.js
+v4-cms-light-decoration-seo.patch
+/tatus --short
